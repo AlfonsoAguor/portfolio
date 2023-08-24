@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio</title>
+</head>
+<body>
+
+  <header>
+    <div *ngIf="isSmallScreen" class="menu-toggle" (click)="toggleMenu()">
+      <img src="../assets/img/menu.png">
+      <li id="logo"><a href="#">AA</a></li>
+    </div>
+
+    <ul *ngIf="!isSmallScreen" class="pm">
+      <li><a [routerLink]="['/sobre-mi']">Sobre Mi</a></li>
+      <li><a [routerLink]="['/cv']">Curriculum</a></li>
+      <li id="logo"><a href="#">AA</a></li>
+      <li><a [routerLink]="['/habilidades']">Habilidades</a></li>
+      <li><a [routerLink]="['/proyectos']">Proyectos</a></li>
+    </ul>
+
+    <ul *ngIf="isSmallScreen && isMenuOpen" class="menu">
+      <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['activado']">Sobre Mi</a></li>
+      <li><a [routerLink]="['/cv']" [routerLinkActive]="['activado']">Curriculum</a></li>
+      <li><a [routerLink]="['/habilidades']" [routerLinkActive]="['activado']">Habilidades</a></li>
+      <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['activado']">Proyectos</a></li>
+    </ul>
+  </header>
+
+<section id="content" class="container shadow-lg">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
+
+  <footer class="container">
+    <div class="col-8">
+      Portafolio de Alfonso Agujetas Ortiz
+    </div>
+  </footer>
+
+</body>
+</html>
