@@ -1038,6 +1038,7 @@ body::before {
     #contact input[type="email"],
     #contact textarea{
         width: 90%;
+        font-size: 0.9rem;
     }
 
     #contact label{
@@ -1092,6 +1093,7 @@ body::before {
     #contact input[type="email"],
     #contact textarea{
         width: 100%;
+        font-size: 0.9rem;
     }
 
     #contact label{
