@@ -951,8 +951,11 @@ body::before {
     #home {
         height: 100vh;
         display: flex;
-        justify-content: center;
         background: linear-gradient(0deg, rgba(37,38,39,1) 5%, rgba(253,187,45,0) 25%);
+    }
+
+    #home .wrap{
+        margin-top: -70px;
     }
     
     #home ul {
@@ -960,10 +963,14 @@ body::before {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .bottom-border-decoration{
+        margin-top: 100px;
+    }
     
     .cv-button,
     .link-button {
-       flex-basis: 40%; /* Espacio entre las líneas de botones */
+       flex-basis: 40%;
     }
     
     #projects{
@@ -1049,4 +1056,12 @@ body::before {
         font-size: 1.4rem;
     }
     
+}
+
+@media (max-width: 375px) {
+    .cv-button,
+    .link-button {
+       flex-basis: 30%;
+       font-size: 0.8rem;
+    }
 }
