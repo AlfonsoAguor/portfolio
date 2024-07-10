@@ -1031,8 +1031,9 @@ body::before {
 
     #contact form{
         width: 90%;
+        font-size: 1rem;
     }
-    
+
     #contact input[type="text"],
     #contact input[type="email"],
     #contact textarea{
@@ -1041,6 +1042,10 @@ body::before {
 
     #contact label{
         margin-left: 6%;
+    }
+
+    #contact button{
+        margin-left: 4%;
     }
 }
 
@@ -1080,7 +1085,7 @@ body::before {
     }
 
     #contact form{
-        width: 90%;
+        width: 95%;
     }
 
     #contact input[type="text"],
@@ -1091,6 +1096,10 @@ body::before {
 
     #contact label{
         margin-left: 2%;
+    }
+
+    #contact button{
+        margin-left: 0;
     }
     
 }
