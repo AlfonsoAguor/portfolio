@@ -1028,6 +1028,20 @@ body::before {
     #home .warp {
         padding-bottom: 500px;
     }
+
+    #contact form{
+        width: 90%;
+    }
+    
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea{
+        width: 90%;
+    }
+
+    #contact label{
+        margin-left: 6%;
+    }
 }
 
 @media (max-width: 440px) {
@@ -1064,6 +1078,26 @@ body::before {
     #pie ul li span{
         font-size: 1.4rem;
     }
+
+    #contact form{
+        width: 90%;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea{
+        width: 100%;
+    }
+
+    #contact label{
+        margin-left: 2%;
+    }
     
+}
+
+@media (max-width: 375px) {
+    #filter-cards button{
+        padding: 4px 8px;
+    }
 }
 
