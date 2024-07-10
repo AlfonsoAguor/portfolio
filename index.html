@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/fonts/icons/style.css">
+    <title>Porfolio | AlfonsoAguor</title>
+</head>
+
+<body>
+    <!--Cabecera-->
+    <div id="milkyway"></div>
+    <header id="header" class="hiddenHeader">
+        <div class="menu">
+            <div class="wrap">
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#certs">Cursos</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <!--Menú flotante-->
+    <nav id="menuScreen" class="hidden">
+        <ul>
+            <li data-tooltip="Inicio"><a href="#home"><span class="icon-house-solid"></a></li>
+            <li data-tooltip="Proyectos"><a href="#projects"><span class="icon-lightbulb-regular"></a></li>
+            <li data-tooltip="Cursos"><a href="#certs"><span class="icon-badge"></a></li>
+            <li data-tooltip="Habilidades"><a href="#skills"><span class="icon-gear-solid"></a></li>
+            <li data-tooltip="Contacto"><a href="#contact"><span class="icon-user-regular"></a></li>
+        </ul>
+    </nav>
+
+    <!--Menu responsive-->
+    <nav id="menuResponsive" class="hiddenResponsive">
+        <ul>
+            <li>
+                <button class="menubtn" onclick="toggleMenu()"><span class="icon-bars-solid"></span></button>
+                <ul id="menuDes" class="menuDesClass">
+                    <li><a href="#home" target="_self"><span class="icon-house-solid"></span></a></li>
+                    <li><a href="#projects" target="_self"><span class="icon-lightbulb-regular"></span></a></li>
+                    <li><a href="#certs" target="_self"><span class="icon-badge"></span></a></li>
+                    <li><a href="#skills" target="_self"><span class="icon-gear-solid"></span></a></li>
+                    <li><a href="#contact" target="_self"><span class="icon-user-regular"></span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <main id="content">
+        <!--Sección de Inicio-->
+        <section id="home">
+            <div class="wrap">
+                <h1>Hola, Soy Alfonso <span>Agujetas</span></h1>
+                <h2>Full-Stack Developer</h2>
+                <div class="top-border-decoration"></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi assumenda illo distinctio perspiciatis
+                    ut
+                    porro explicabo iusto, quod at ipsa maiores magnam odit unde laboriosam dolores suscipit saepe
+                    accusamus
+                    perferendis.</p>
+                <ul>
+                    <li class="cv-button"><a href="./cv/" target="_blank" download>Descargar CV</a></li>
+                    <li class="cv-button"><a href="https://cv-web-sigma.vercel.app/" target="_blank" class="icon-lightbulb">Visitar CV web</a></li>
+                    <li class="link-button"><a href="https://www.linkedin.com/in/alfonso-agujetas-899088218" target="_blank"><span class="icon-linkedin"></a></li>
+                    <li class="link-button"><a href="https://github.com/AlfonsoAguor" target="_blank"><span class="icon-github"></a></li>
+                </ul>
+                <div class="bottom-border-decoration"></div>
+            </div>
+        </section>
+
+        <div class="wrap">
+            <!--Sección de proyectos-->
+            <section id="projects">
+                <h1 class="titulo">Proyectos</h1>
+                <div class="border-decoration"></div>
+                <div id="filter-cards">
+                    <button onclick="filterCards('all')">Mostrar Todo</button>
+                    <button onclick="filterCards('frontend')">Maquetación</button>
+                    <button onclick="filterCards('app')">Apps</button>
+                </div>
+                <div id="cards">
+                    <div class="card app">
+                        <a href="https://cv-web-sigma.vercel.app/" target="_blank"><img src="./assets/img/cv-web.webp" alt="CV Web"></a>
+                        <h3>CV web</h3>
+                        <p>Currículum vitae interactivo y dinámico, donde podrás explorar sobre mi educación, experiencia y habilidades. Esta desarrollada con Angular.</p>
+                        <div class="tecn">
+                            <span><img src="./assets/img/angular.svg" alt="angular"></span>
+                            <span><img src="./assets/img/bootstrap.svg" alt="boostrap"></span>
+                        </div>
+                    </div>
+                    <div class="card frontend">
+                        <a href="https://blog-virid-xi.vercel.app/" target="_blank"><img src="./assets/img/blog.webp" alt="blog"></a>
+                        <h3>Blog</h3>
+                        <p>Maquetación de blog. Pagina web que me ha servido como practica para mejor en CSS.</p>
+                        <div class="tecn">
+                            <span><img src="./assets/img/html.svg" alt="html"></span>
+                            <span><img src="./assets/img/css.svg" alt="css"></span>
+                        </div>
+                    </div>
+                    <div class="card frontend">
+                        <a href="https://maquetacion-css-grid.vercel.app/" target="_blank"><img src="./assets/img/css-grid.webp" alt="blog"></a>
+                        <h3>Porfolio</h3>
+                        <p>Maquetación de porfolio hecho con CSS Grid.</p>
+                        <div class="tecn">
+                            <span><img src="./assets/img/html.svg" alt="html"></span>
+                            <span><img src="./assets/img/css.svg" alt="css"></span>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <!--Sección de curso-->
+            <section id="certs">
+                <h1 class="titulo">Cursos</h1>
+                <div class="border-decoration"></div>
+                <div id="cursos">
+                    <div class="curso">
+                        <img src="assets/img/angular.webp" alt="Curso Angular">
+                    </div>
+                    <div class="curso">
+                        <img src="assets/img/masterJavaScript.webp" alt="Master JavaScript">
+                    </div>
+                </div>
+                
+            </section>
+
+            <!--Sección de habilidades-->
+            <section id="skills">
+                <h1 class="titulo">Habilidades</h1>
+                <div class="border-decoration"></div>
+                <div id="clasification">
+                    <div class="box frontend">
+                        <h3>FRONTEND</h3>
+                        <p>Habilidades y tecnologías de desarrollo frontend, incluyendo lenguajes de marcado, hojas de estilo y preprocesadores CSS.</p>
+                        <div class="skill-icon">
+                            <img src="assets/img/html.svg" alt="html">
+                            <img src="assets/img/css.svg" alt="css">
+                            <img src="assets/img/sass.svg" alt="sass">
+                            <img src="assets/img/less.svg" alt="less">
+                            <img src="assets/img/bootstrap.svg" alt="bootstrap">
+                        </div>
+                    </div>
+                    <div class="box frameworks">
+                        <h3>FRAMEWORKS</h3>
+                        <p>Conocimientos de frameworks y bibliotecas de JavaScript utilizados para el desarrollo de aplicaciones web dinámicas.</p>
+                        <div class="skill-icon">
+                            <img src="assets/img/angular.svg" alt="angular"> 
+                            <img src="assets/img/react.svg" alt="react"> 
+                            <img src="assets/img/vue.svg" alt="vue"> 
+                            <img src="assets/img/jquery.svg" alt="jquery"> 
+                        </div>
+                    </div>
+                    <div class="box backend">
+                        <h3>BACKEND</h3>
+                        <p>Habilidades en tecnologías y lenguajes de backend para el desarrollo del lado del servidor, incluyendo bases de datos y servidores.</p>
+                        <div class="skill-icon">
+                            <img src="assets/img/js.svg" alt="angular"> 
+                            <img src="assets/img/nodejs.svg" alt="react"> 
+                            <img src="assets/img/mongodb.svg" alt="vue"> 
+                            <img src="assets/img/mysql.svg" alt="jquery"> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Seccion de contacto-->
+            <section id="contact">
+                <h1 class="titulo">Contacto</h1>
+                <div class="border-decoration"></div>
+                <form class="contactForm" id="contactForm" action="https://formsubmit.co/alfonsoaguor@gmail.com" method="POST">
+                    <label for="name">Nombre: </label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="mail">Correo: </label>
+                    <input type="email" id="mail" name="email" required>
+                
+                    <label for="message">Mensaje: </label>
+                    <textarea id="message" name="message" required></textarea>
+                
+                    <button type="submit">
+                        <span class="icon-send"> </span>Enviar
+                    </button>
+                </form>
+                
+            </section>
+        </div>
+    </main>
+    <footer id="pie">
+        <p>Desarrollado por AlfonsoAguor</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/alfonso-agujetas-899088218" target="_blank"><span class="icon-linkedin"></a></li>
+            <li><a href="https://github.com/AlfonsoAguor" target="_blank"><span class="icon-github"></a></li>
+            <li><span class="icon-envelope-regular" id="copyText"></span></li>
+        </ul>
+        <div id="showMail"></div>
+    </footer>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
