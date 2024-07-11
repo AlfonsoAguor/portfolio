@@ -252,10 +252,22 @@ body::before {
         height: 0;
     }
     100% {
-        height: 250px; /* Altura final deseada del menú */
+        height: 250px;
     }
 }
 
+#menuResponsive > ul > li > .menuDesClass.hide {
+    animation: close 0.5s forwards;
+}
+
+@keyframes close {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
 
 #menuResponsive > ul > li > .menuDesClass > li {
     list-style: none;

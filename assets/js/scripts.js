@@ -23,16 +23,24 @@ window.addEventListener('scroll', toggleMenuVisibility);
 /*Funcion menu responsive*/
 function toggleMenu() {
     var dropdown = document.getElementById("menuDes");
-    dropdown.classList.toggle("show");
     var btn = document.getElementsByClassName("menubtn")[0];
 
     if (dropdown.classList.contains('show')) {
-      btn.addEventListener('click', function closeMenu() {
-        dropdown.classList.remove("show");
-        btn.removeEventListener('click', closeMenu);
-      }, { once: true });
+        dropdown.classList.remove('show');
+        dropdown.classList.add('hide');
+        dropdown.addEventListener('animationend', function handleAnimationEnd() {
+            dropdown.classList.remove('hide');
+            dropdown.style.display = 'none';
+            dropdown.removeEventListener('animationend', handleAnimationEnd);
+        });
+    } else {
+        dropdown.style.display = 'flex';
+        dropdown.classList.remove('hide');
+        dropdown.classList.add('show');
     }
-  }
+}
+
+
   
  
 /*Funcion para clasificar las cards*/
