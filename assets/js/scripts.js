@@ -79,27 +79,37 @@ document.getElementById('copyText').addEventListener('click', function() {
 });
 
 /* Funcion del carousel*/
-let currentIndex = 0;
+function showSlide(carousel, index) {
+    const slides = carousel.querySelectorAll('.carousel-item');
+    let currentIndex = index;
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-item');
     if (index >= slides.length) {
         currentIndex = 0;
     } else if (index < 0) {
         currentIndex = slides.length - 1;
-    } else {
-        currentIndex = index;
     }
+
     const offset = -currentIndex * 100;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    carousel.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+
+    carousel.dataset.currentIndex = currentIndex;
 }
 
-function nextSlide() {
-    showSlide(currentIndex + 1);
+function nextSlide(carousel) {
+    const currentIndex = parseInt(carousel.dataset.currentIndex);
+    showSlide(carousel, currentIndex + 1);
 }
 
-function prevSlide() {
-    showSlide(currentIndex - 1);
+function prevSlide(carousel) {
+    const currentIndex = parseInt(carousel.dataset.currentIndex);
+    showSlide(carousel, currentIndex - 1);
 }
 
-setInterval(nextSlide, 5000);
+document.querySelectorAll('.carousel').forEach(carousel => {
+    carousel.dataset.currentIndex = 0; 
+
+    carousel.querySelector('.next').addEventListener('click', () => nextSlide(carousel));
+    carousel.querySelector('.prev').addEventListener('click', () => prevSlide(carousel));
+
+    setInterval(() => nextSlide(carousel), 5000);
+});
