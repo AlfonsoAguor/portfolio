@@ -111,5 +111,5 @@ document.querySelectorAll('.carousel').forEach(carousel => {
     carousel.querySelector('.next').addEventListener('click', () => nextSlide(carousel));
     carousel.querySelector('.prev').addEventListener('click', () => prevSlide(carousel));
 
-    setInterval(() => nextSlide(carousel), 5000);
+    setInterval(() => nextSlide(carousel), 30000);
 });
